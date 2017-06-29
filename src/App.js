@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { withRouter, Link } from 'react-router-dom'
 import { Navbar, Nav } from 'react-bootstrap'
-import Button from 'antd/lib/button'
+import { Button } from 'antd'
 import './App.css'
 
 import Routes from './Routes'
@@ -12,7 +12,7 @@ class App extends Component {
     event.preventDefault()
     this.props.history.push(event.currentTarget.getAttribute('href'))
   }
-  
+
   render () {
     return (
       <div className='App container'>

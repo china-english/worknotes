@@ -2,7 +2,7 @@
  * Created by zhaoyu on Jun 29, 2017.
  */
 import React, { Component } from 'react'
-import Button from 'antd/lib/button'
+import { Button } from 'antd'
 import './Home.css'
 
 class Home extends Component {
@@ -11,7 +11,7 @@ class Home extends Component {
       <div className='Home'>
         <div className='lander'>
           <h1>Scratch</h1>
-          <Button type="primary">Button</Button>
+          <Button type='primary'>Button</Button>
           <p>A simple note taking app</p>
         </div>
       </div>
