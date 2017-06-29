@@ -1,21 +1,40 @@
 import React, { Component } from 'react'
-import logo from './logo.svg'
+import { withRouter, Link } from 'react-router-dom'
+import { Navbar, Nav } from 'react-bootstrap'
+import Button from 'antd/lib/button'
 import './App.css'
 
+import Routes from './Routes'
+import RouteNavItem from './components/RouteNavItem'
+
 class App extends Component {
+  handleNavLink = (event) => {
+    event.preventDefault()
+    this.props.history.push(event.currentTarget.getAttribute('href'))
+  }
+  
   render () {
     return (
-      <div className='App'>
-        <div className='App-header'>
-          <img src={logo} className='App-logo' alt='logo' />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className='App-intro'>
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App container'>
+        <Navbar fluid collapseOnSelect>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <Link to='/'>Scratch</Link>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+              <RouteNavItem onClick={this.handleNavLink} href='/signup'>Signup</RouteNavItem>
+              <RouteNavItem onClick={this.handleNavLink} href='/login'>Login</RouteNavItem>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+        <Button type="primary">Button</Button>
+        <Routes />
       </div>
     )
   }
 }
 
-export default App
+export default withRouter(App)
