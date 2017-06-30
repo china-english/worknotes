@@ -6,3 +6,29 @@
 .App .navbar-brand {
   font-weight: bold;
 }
+
+.logo {
+  width: 120px;
+  height: 31px;
+  background: #333;
+  border-radius: 6px;
+  margin: 16px 24px 16px 0;
+  float: left;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 0) {
+  .nav-phone-icon {
+    display: block;
+  }
+}
+
+.nav-more-icon {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 32px;
+  z-index: 1;
+  width: 16px;
+  height: 22px;
+  cursor: pointer;
+}
