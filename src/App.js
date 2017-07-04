@@ -49,10 +49,10 @@ class App extends React.Component {
           <Header>
             <Row>
               <Col xs={3} sm={2} lg={0}>图标</Col>
-              <Col xs={19} sm={21} lg={4}>洛阳师范学院</Col>
+              <Col xs={19} sm={21} lg={4}><span style={{fontSize: 20, color: 'white'}}>洛阳师范学院</span></Col>
               <Col xs={0} lg={12}>
                 <Menu
-                  theme='light'
+                  theme='dark'
                   onClick={this.handleClick}
                   selectedKeys={[this.state.current]}
                   mode='horizontal'
@@ -64,8 +64,10 @@ class App extends React.Component {
                     </Link>
                   </Menu.Item>
                   <SubMenu title={<span><Icon type='setting' />服务大厅</span>}>
-                    <ItemGroup title='Item 1'>
-                      <Menu.Item key='setting:1'>Option 1</Menu.Item>
+                    <ItemGroup title='考勤管理'>
+                      <Menu.Item key='setting:1'>
+                        <a href='/punch-in'>签到</a>
+                      </Menu.Item>
                       <Menu.Item key='setting:2'>Option 2</Menu.Item>
                     </ItemGroup>
                     <ItemGroup title='Item 2'>
@@ -73,17 +75,13 @@ class App extends React.Component {
                       <Menu.Item key='setting:4'>Option 4</Menu.Item>
                     </ItemGroup>
                   </SubMenu>
-                  <Menu.Item key='alipay'>
-                    <a href='https://ant.design' target='_blank' rel='noopener noreferrer'>Navigation
-                      Four - Link</a>
-                  </Menu.Item>
                 </Menu>
               </Col>
               <Col xs={2} sm={1} lg={{span: 1, offset: 7}}
                 style={{flex: 1, flexDirection: 'row', justifyContent: 'flex-end'}}>
                 <Dropdown overlay={adminPanel}>
                   <a className='ant-dropdown-link' href='#'
-                    style={{color: 'white', fontSize: '16px'}}>登&nbsp;&nbsp;录</a>
+                    style={{color: 'white', fontSize: '13px'}}>登&nbsp;&nbsp;录</a>
                 </Dropdown>
               </Col>
             </Row>
