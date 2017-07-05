@@ -45,16 +45,16 @@ const LoginForm = (props) => {
       </Row>
     </div>
   )
-  }
+}
 
-  LoginForm.propTypes = {
-    handleSubmit: PropTypes.func,
-    submitting: PropTypes.bool,
-    reset: PropTypes.func,
-    pristine: PropTypes.bool
-  }
+LoginForm.propTypes = {
+  handleSubmit: PropTypes.func,
+  submitting: PropTypes.bool,
+  reset: PropTypes.func,
+  pristine: PropTypes.bool
+}
 
-  export default reduxForm({
-    form: 'login',
-    validate
-  })(LoginForm)
+export default reduxForm({
+  form: 'login',
+  validate
+})(LoginForm)
